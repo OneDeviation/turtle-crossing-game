@@ -19,3 +19,8 @@ class Player(Turtle):
 
     def move(self):
         self.forward(MOVE_DISTANCE)
+
+    def crossed_safe(self):
+        if self.ycor() >= FINISH_LINE_Y:
+            self.level_start()
+            return True
